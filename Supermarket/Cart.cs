@@ -12,19 +12,25 @@ namespace Supermarket
 
         public List<Product> AddProduct(Product p)
         {
-            return new List<Product>();
+            this.products.Add(p);
+            return this.products;
         }
 
         public List<Product> RemoveProduct(Product p)
         {
-            return new List<Product>();
+            this.products.Remove(p);
+            return this.products;
         }
 
         public Product FindProduct(Product p)
         {
-            return new Product();
+            return FindProduct(p.ProductName);
         }
 
+        public Product FindProduct(string ProductName)
+        {
+            return this.products.Find(x => x.ProductName.Equals(ProductName)) ?? new Product("", 0.0, PricingRules.SimplePrice);
+        }
 
         public (double, PricingRules, string) FindProductPrice(Product p)
         {
