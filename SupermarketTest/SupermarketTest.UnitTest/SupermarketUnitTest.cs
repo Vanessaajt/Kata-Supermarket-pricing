@@ -81,12 +81,14 @@ namespace SupermarketTest
         [TestMethod]
         public void shouldfindProduct()
         {
+            initCart();
             Assert.AreEqual("simpleProduct", cart.FindProduct(simpleProduct).ProductName);
         }
 
         [TestMethod]
         public void shouldGivePriceOfProduct()
         {
+            initCart();
             Assert.AreEqual(2, cart.FindProductPrice(simpleProduct).Item1);
             Assert.AreEqual(3, cart.FindProductPrice(complexProduct2).Item1);
         }
