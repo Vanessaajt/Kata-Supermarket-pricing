@@ -11,6 +11,8 @@ namespace Supermarket
         public string ProductName { get; set; }
         public double ProductPrice { get; set; }
         public PricingRules ProductRule { get; set; }
+        public double Weight { get; set; }
+        public WeightUnit Unit { get; set; }
 
         public Product()
         {
@@ -23,6 +25,15 @@ namespace Supermarket
             ProductName = name;
             ProductPrice = price;
             ProductRule = rule;
+        }
+
+        public Product(string name, double price, PricingRules rule, double weight, WeightUnit unit)
+        {
+            ProductName = name;
+            ProductPrice = price;
+            ProductRule = rule;
+            Weight = weight;
+            Unit = unit;
         }
 
         public PricingRules? GetPricingRules()

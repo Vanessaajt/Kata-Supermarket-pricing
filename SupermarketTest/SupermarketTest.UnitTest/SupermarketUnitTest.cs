@@ -9,7 +9,7 @@ namespace SupermarketTest
         Product simpleProduct = new Product("simpleProduct", 2, PricingRules.SimplePrice);
         Product complexProduct1 = new Product("ThreeForSinglePrice", 1, PricingRules.ThreeForSinglePrice);
         Product complexProduct2 = new Product("TwoAndOneFree", 3, PricingRules.TwoAndOneFree);
-        Product complexProduct3 = new Product("PoundsToOunces", 3, PricingRules.PoundsToOunces);
+        Product complexProduct3 = new Product("PoundsToOunces", 3, PricingRules.PoundsToOunces, 4, WeightUnit.Ounce);
 
         Cart cart = new Cart();
         Cart SimpleCart = new Cart();

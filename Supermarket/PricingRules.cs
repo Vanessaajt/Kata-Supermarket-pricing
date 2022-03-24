@@ -14,4 +14,10 @@ namespace Supermarket
         PoundsToOunces = 3
     }
 
+    public enum WeightUnit
+    {
+        Ounce = 0,
+        Pound = 1
+    }
+
 }
