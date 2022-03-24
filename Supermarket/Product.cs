@@ -27,7 +27,7 @@ namespace Supermarket
 
         public PricingRules? GetPricingRules()
         {
-            return null;
+            return this.ProductRule;
         }
 
     }
